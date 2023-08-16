@@ -8,11 +8,35 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
+    const idade = Number(prompt("qual sua idade?").trim())
+    const porte = prompt("qual o porte do seu cão? (P-pequeno M-medio G-grande)").trim().toLocaleUpperCase()
 
-    
+    const pequeno = idade / 5
+    const medio = idade / 6
+    const grande = idade / 7
+
+
     // PROCESSAMENTO
+    if (isNaN(idade) || !isNaN(porte)) {
+        alert("resultados invalidos")
+    }
+    else {
+        switch (porte) {
+            case "P":
+                alert(`a idade humana do seu cão é de ${pequeno}`);
+                break;
+            case "M":
+                alert(`a idade humana do seu cão é de ${medio}`);
+                break;
+            case "G":
+                alert(`a idade humana do seu cão é de ${grande}`);
+                break;
+            default:
+                alert("resultados invalidos");
+                break;
+        }
+    }
 
-    
     // SAÍDA
 
-    </script>
+</script>

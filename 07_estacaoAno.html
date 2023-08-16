@@ -6,11 +6,74 @@
     */
 
     //ENTRADA
+    const hemisferio = prompt("em qual hemisfério você está (s ou n)").toLocaleUpperCase().trim()
+    const mes = Number(("informe quala mes voce esta esta(ex: para janeiro = 1)").trim().toLocaleUpperCase())
 
-    
+
     //PROCESSAMENTO
 
+    switch (hemisferio) {
+        case "S":
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    alert("a estação atual é o verão");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    alert("a estação atual é outono");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    alert("a estação atual é inverno");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    alert("a estação atual é primavera")
 
-    //SAÍDA
+                    break;
+            }
+            break;
+        case "N":
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    alert("a estação atual é o inverno");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    alert("a estação atual é primavera");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    alert("a estação atual é verão");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    alert("a estação atual é outono")
+
+                    break;
+                default:
+                    alert("resultado invalido")
+                    break;
+            }
+
+
+    }
+
+
+
+    /*20 de maroço a 21 de julho == sul-outono e norte - primavera
+    21 de julho a 22 de setembro == sul-inverno e o norte - verao
+    22 de setembro a 21 de dezembro == sul-primavera e no norte - outono
+    21 de dezembro a 20 de março == sul-verao e o norte - invero*/
 
 </script>

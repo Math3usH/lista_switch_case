@@ -12,11 +12,28 @@
     */
 
     //ENTRADA
-    
-    
-    //PROCESSAMENTO
+    const turno = prompt("Em qual turno você estuda? M-matutino V-vespertino N-noturno").trim().toLowerCase()
 
-    
+
+
+    //PROCESSAMENTO
+    switch (turno) {
+        case "m":
+        case "matutino":
+            alert("Bom dia!");
+            break;
+        case "v":
+        case "vespertino":    
+            alert("boa tarde!");
+            break;
+        case "n":
+        case "noturno":    
+            alert("boa noite")
+            break;
+        default:
+            alert("resultado informado invalido");
+    }
+
     //SAÍDA
 
 </script>

@@ -8,11 +8,46 @@
     */
 
     //ENTRADA
+    const num1 = Number(prompt("informe um numero").trim().replace(",", "."))
+    const num2 = Number(prompt("informe outro numero").trim().replace(",", "."))
+    const operacao = prompt("informe a operação que deseja realizar com os dois numero (M-multiplicação, D-divisão, SO-soma e SU-subtração)").trim().toLocaleUpperCase()
 
 
     //PROCESSAMENTO
-
+    const mult = num1 * num2
+    const div = num1 / num2
+    const div1 = num2 / num1
+    const soma = num1 + num2
+    const sub = num1 - num2
+    const sub1 = num2 - num1
     
+    const m1 = mult  % 2
+
+    if (isNaN(num1) || isNaN(num2) || !isNaN(operacao)) {
+        alert("informações invalidas")
+    }
+    else {
+        switch (operacao) {
+            case "M":
+                alert(`O numero ${num1} dividido pelo ${num2} é igual a ${mult.toFixed(2)}`);
+                break;
+            case "D":
+                alert(`o numero ${num1} dividido pelo numero ${num2} é igual a ${div.toFixed(2)} \n e o numero ${num2} dividido pelo numero ${num2} é igual a ${div1.toFixed(2)}`);
+                break;
+            case "SO":
+                alert(`o numero ${num1} somado ao numero ${num2} é igual a ${somatoFixed(2)} `)
+                break;
+                case "SU":
+                    alert(`o resultado do numero ${num1} menos o numero ${num2} é igual a ${sub.toFixed} e a subtração do ${num2} menos o numero ${num1} é igual a ${sub1.toFixed(2)}`)
+                    break;
+                    default: 
+                    alert("resultado invalido")
+                    break;
+        }
+    }
+
+
+
     //SAÍDA
 
 </script>

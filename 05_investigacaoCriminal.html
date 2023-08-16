@@ -11,9 +11,65 @@
     */
 
     //ENTRADA
+    alert("você esta em uma investigação!")
+    alert("digite 1 para sim e 0 para não")
+    const per1 = prompt("telefonou para a vitima?").trim().toLocaleUpperCase()
+    const per2 = prompt("esteve no local do crime?").trim().toLocaleUpperCase()
+    const per3 = prompt("mora perto da vitima?").trim().toLocaleUpperCase()
+    const per4 = prompt("devia para vitima?").trim().toLocaleUpperCase()
+    const per5 = prompt("ja trabalhou com a vitima?").trim().toLocaleUpperCase()
 
-    
+    let contagem = 0
+
+
     //PROCESSAMENTO
+    if (isNaN(per1) || isNaN(per2) || isNaN(per3) || isNaN(per4) || isNaN(per5)) {
+        alert("informe 1 para sim e 0 para não")
+    }
+    else {
+
+        switch (per1) {
+            case "1":
+                contagem++;
+                break;
+        }
+        switch (per2) {
+            case "1":
+                contagem++
+                break;
+        }
+        switch (per3) {
+            case "1":
+                contagem++
+                break;
+        }
+        switch (per4) {
+            case "1":
+                contagem++
+                break;
+        }
+        switch (per5) {
+            case "1":
+                contagem++
+                break;
+        }
+
+    }
+
+    switch (contagem) {
+        case 2:
+            alert("você é suspeito")
+            break;
+        case 3:
+        case 4:
+            alert("você é cumplice")
+            break;
+            case 5:
+                alert("voce é o assasino")
+                break;
+                default:
+                    alert("voce é inocente")
+    }
 
 
     //SAÍDA
